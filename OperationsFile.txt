@@ -1,0 +1,15 @@
+//comand to calculate percentage of the population below the poverty level in the counties for which the high school or above completion percentage is <= 80 percent
+
+./main.out county_demographics.csv filter:Education_High_School_or_Higher:le:80 percent:Income_Persons_Below_Poverty_Level
+
+//command to calculate percentage of the population below the poverty level in the counties for which the bachelor's or above completion percentage is >= 40 percent.
+
+./main.out county_demographics.csv filter:Education_Bachelors_Degree_or_Higher:le:40 percent:Income_Persons_Below_Poverty_Level
+
+//command to calculate percentage of the population below the poverty level in the counties for which the selected ethnicity is >= 40 percent. (of ethnicities column of your choosing)
+
+./main.out county_demographics.csv filter:Ethnicities_White_Alone:ge:40 percent:Income_Persons_Below_Poverty_Level
+
+//command to calculate percentage of the population below the poverty level in the counties for which the selected ethnicity is <= 40 percent.
+
+./main.out county_demographics.csv filter:Ethnicities_White_Alone:le:40 percent:Income_Persons_Below_Poverty_Level
