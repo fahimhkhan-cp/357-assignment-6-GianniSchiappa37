@@ -9,8 +9,6 @@
 
 // Struct to store county demographics data
 
-//add each of the struct values to the parse data type field, number is number in small.csv for case
-//then add checks for each of them in filter
 typedef struct {
     char county[MAX_NAME_LEN];
     char state[MAX_NAME_LEN];
@@ -98,7 +96,7 @@ void parse_demographics_file(const char *filename) {
                 case 1: // State
                     strncpy(county.state, token, MAX_NAME_LEN - 1);
                     break;
-                case 5: // Education.Bachelor's Degree or Higher
+                case 5: // Education.Bachelors Degree or Higher
                     county.education_bachelors_or_higher = atof(token);
                     break;
                 case 6: // Education.High School or Higher
@@ -407,7 +405,7 @@ long long population_field(const char *field) {
         }
 
         float percentage;
-        if (strcmp(matching_field, "Education_Bachelor's_Degree_or_Higher") == 0) {
+        if (strcmp(matching_field, "Education_Bachelors_Degree_or_Higher") == 0) {
             percentage = counties[i].education_bachelors_or_higher;
         } else if (strcmp(matching_field, "Education_High_School_or_Higher") == 0) {
             percentage = counties[i].education_high_school_or_higher;
